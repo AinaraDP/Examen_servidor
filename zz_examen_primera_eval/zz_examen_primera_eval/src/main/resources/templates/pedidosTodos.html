@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"  href="/pedidosPorCliente.css">
+</head>
+<body>
+	
+	<table>
+		<tr>
+			<th>Id Pedido</th>
+			<th>Total</th>
+			<th>Fecha</th>
+			<th>Id Cliente</th>
+			<th>Id Comercial</th>
+		</tr>
+		<tr th:each="pedido : ${pedidos}">
+			<td th:text="${pedido.idPedido}"></td>
+			<td th:text="${pedido.total}"></td>
+			<td th:text="${pedido.fecha}"></td> 
+			<td th:text="${pedido.cliente.idCliente}"></td> 
+			<td th:text="${pedido.comercial.idComercial}"></td> 
+		</tr>
+	</table>
+</body>
+</html>

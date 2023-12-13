@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+body{
+	background-color: darkgray;
+	display: flex;
+	justify-content: center;
+}
+
+.container{
+	margin-top: 100px;
+	width: 70%;
+	border: 1px solid black;
+	display: grid;
+	grid-template-rows: auto auto auto auto ;
+	grid-row-gap: 16px; 
+  	padding: 16px;
+	
+}
+.opciones{
+	
+	margin-top: 42px;
+	margin-left: 16px;
+	display: flex;
+	gap: 100px;
+	grid-row: 1/2;
+}
+
+.opciones a{
+	color: white;
+	background-color: rgb(128, 128, 255);
+	border: 1px solid black;
+	padding: 8px;
+	border-radius: 8px;
+}
+
+.login{
+	margin-top: 16px;
+	margin-left: auto;
+	display: grid;
+	gap: 20px;
+	grid-row: 1/3;
+}
+
+.login a{
+	color: white;
+	background-color: rgb(128, 128, 255);
+	border: 1px solid black;
+	padding: 8px;
+	border-radius: 8px;
+
+}
+
+.listado{
+	position: relative;
+	margin-left: 100px;
+	margin-top: 50px;
+	grid-row: 3/4;
+}
+
+.listado a{
+	color: white;
+	background-color: rgb(128, 128, 255);
+	border: 1px solid black;
+	padding: 8px;
+	border-radius: 8px;
+}
+
+th{
+	color: white;
+	background-color: rgb(128, 128, 255);
+}
+
+td{
+	padding: 15px;
+	border: 1px solid black;
+}
+
+table{
+	margin-top: 20px;
+	border: 1px solid black;
+}
+
+td .detalle{
+	color: white;
+}
+
+.detalle a{
+	color: white;
+	text-decoration: none;
+	background-color: rgb(128, 128, 255);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

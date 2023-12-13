@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+<link rel="stylesheet"  href="/home.css">
+</head>
+<body>
+	<div class="container">
+		<div class="opciones">
+			<h3 class="mensaje">Mensaje : <span th:text="${mensaje}"></span> </h3>
+			<a th:href =@{/}>Comerciales </a>
+			<a>Pedidos </a>
+		</div>
+	
+		<div class="login">
+			<a>Iniciar sesion</a>
+			<a>Cerrar sesion</a>
+		</div>
+		
+		<div class="listado"> 
+			<p>Listado de Clientes</p>
+			<a>Nuevo Cliente </a>
+			
+			<table>
+			<tr>
+				<th>Id</th>
+				<th>Nombre</th>
+				<th>Apellido 1</th>
+				<th>Apellido 2</th>
+				<th>Ver Detalle</th>
+			</tr>
+			<tr th:each="cliente : ${clientes}">
+				<td th:text="${cliente.idCliente}"></td>
+				<td th:text="${cliente.nombre}"></td>
+				<td th:text="${cliente.apellido1}"></td>
+				<td th:text="${cliente.apellido2}"></td> 
+				<td class="detalle">
+					<a th:href="@{/clientes/detalle/{id}(id=${cliente.idCliente})}">Ver detalles</a>
+				</td>
+			</tr>
+			</table>
+		</div>
+		
+		
+	</div>
+	
+	
+	
+
+</body>
+</html>
